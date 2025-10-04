@@ -1,19 +1,21 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
-import RegisterScreen from './Screens/RegisterScreen/RegisterScreen.jsx'
-import {LoginScreen} from './Screens/LoginScreen/LoginScreen.jsx'
-
-
-
-
+import RegisterScreen from './Screens/RegisterScreen/RegisterScreen'
+import { LoginScreen } from './Screens/LoginScreen/LoginScreen'
+import AuthMiddleware from './Middlewares/AuthMiddlewares.jsx'
 
 function App() {
 
   return (
-      <Routes>
-        <Route path='/login' element={<LoginScreen/>}/> 
-        <Route path='/register' element={<RegisterScreen/>}/>
-      </Routes>
+
+    <Routes>
+      <Route path='/login' element={<LoginScreen/>} />
+      <Route path='/register' element={<RegisterScreen/>} />
+      <Route element={<AuthMiddleware/>}>
+        <Route path='/home' element={<h1>Home</h1>}/>
+      </Route>
+    </Routes>
+
   )
 }
 

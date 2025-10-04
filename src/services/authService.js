@@ -1,3 +1,4 @@
+import ENVIRONMENT from "../config/environment.js"
 import { CONTENT_TYPE_VALUES, HEADERS, HTTP_METHODS } from "../constants/http.js"
 
 
@@ -14,7 +15,7 @@ export async function register(name,email,password) {
     1- La URL a la que vamos a consultar
     2- Un objeto de configuracion de la consulta */
     const response_http = await fetch(
-        'http://localhost:8080/api/auth/register',
+    `${ENVIRONMENT.URL_API}/api/auth/register`,
         {
             method: HTTP_METHODS.POST,
             headers: {
@@ -32,7 +33,7 @@ export async function register(name,email,password) {
 
 export async function login(email,password) {
     const response = await fetch(
-        'http://localhost:8080/api/auth/login',
+        `${ENVIRONMENT.URL_API}/api/auth/login`,
         {
             method: HTTP_METHODS.POST,
             headers: {
