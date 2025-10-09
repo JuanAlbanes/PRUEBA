@@ -1,30 +1,8 @@
-/* import React from 'react'
-import { Route, Routes } from 'react-router'
-import RegisterScreen from './Screens/RegisterScreen/RegisterScreen'
-import { LoginScreen } from './Screens/LoginScreen/LoginScreen'
-import AuthMiddleware from './Middlewares/AuthMiddlewares.jsx'
-
-function App() {
-
-  return (
-
-    <Routes>
-      <Route path='/login' element={<LoginScreen/>} />
-      <Route path='/register' element={<RegisterScreen/>} />
-      <Route element={<AuthMiddleware/>}>
-        <Route path='/home' element={<h1>Home</h1>}/>
-      </Route>
-    </Routes>
-
-  )
-}
-
-export default App */
 import React from 'react'
 import { Route, Routes } from 'react-router'
 import RegisterScreen from './Screens/RegisterScreen/RegisterScreen'
 import { LoginScreen } from './Screens/LoginScreen/LoginScreen'
-import AuthMiddleware from './Middlewares/AuthMiddleware'
+import AuthMiddleware from './Middlewares/AuthMiddlewares.jsx'
 
 function App() {
 
@@ -42,4 +20,7 @@ function App() {
   )
 }
 
-export default App
+export default App 
+
+
+
