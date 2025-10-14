@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router'
 import RegisterScreen from './Screens/RegisterScreen/RegisterScreen'
 import { LoginScreen } from './Screens/LoginScreen/LoginScreen'
 import AuthMiddleware from './Middlewares/AuthMiddlewares.jsx'
+import SlackApp from "./slack/pages/SlackApp.jsx";
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <Route path='/login' element={<LoginScreen/>} />
       <Route path='/register' element={<RegisterScreen/>} />
       <Route element={<AuthMiddleware/>}>
-        <Route path='/home' element={<h1>Home</h1>}/>
+        <Route path='/home' element={<SlackApp />}/>
       </Route>
     </Routes>
 

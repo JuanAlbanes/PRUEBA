@@ -1,0 +1,14 @@
+.message {
+    margin-bottom: 1rem;
+}
+.message strong {
+    color: #fff;
+    display: block;
+}
+.message p {
+    margin: 0.2rem 0;
+}
+.time {
+    color: #888;
+    font-size: 0.8rem;
+}
