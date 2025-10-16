@@ -8,7 +8,7 @@ export default function ChatHeader({ workspace }) {
 
     return (
         <div className="chat-header">
-            <Link to="/" className="btn-back">
+            <Link to="/home" className="btn-back">
                 <FaArrowLeft />
             </Link>
             <div className="workspace-header-icon">

@@ -1,5 +1,4 @@
 @import "../../../normalize/normalize.css";
-
 .chat-screen {
     display: flex;
     flex-direction: column;
