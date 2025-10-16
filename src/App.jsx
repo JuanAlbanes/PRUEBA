@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router'
 import RegisterScreen from './Screens/RegisterScreen/RegisterScreen'
 import { LoginScreen } from './Screens/LoginScreen/LoginScreen'
 import AuthMiddleware from './Middlewares/AuthMiddlewares.jsx'
-import SlackApp from "./slack/pages/SlackApp.jsx";
+import ChatScreen from './slack/Screens/ChatScreen/ChatScreen.jsx'
+import WorkspaceListScreen from './slack/Screens/WorkspaceListScreen/WorkspaceListScreen.jsx'
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
       <Route path='/login' element={<LoginScreen/>} />
       <Route path='/register' element={<RegisterScreen/>} />
       <Route element={<AuthMiddleware/>}>
-        <Route path='/home' element={<SlackApp />}/>
+      <Route path='/workspace/:workspace_id' element = {<ChatScreen/>}/>
+      <Route path='/home' element={<WorkspaceListScreen />}/>
       </Route>
     </Routes>
 

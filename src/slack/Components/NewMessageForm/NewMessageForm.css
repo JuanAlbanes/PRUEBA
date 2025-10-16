@@ -1,0 +1,64 @@
+@import "../../../normalize/normalize.css";
+
+.message-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+}
+.message-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.message-input:focus {
+    border-color: #611f69;
+    box-shadow: 0 0 0 2px rgba(97, 31, 105, 0.1);
+}
+.message-input::placeholder {
+    color: #616061;
+}
+.btn-send {
+    width: 44px;
+    height: 44px;
+    background-color: #611f69;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-send:hover {
+    background-color: #4a1850;
+    transform: scale(1.05);
+}
+.btn-send:active {
+    transform: scale(0.95);
+}
+@media (max-width: 768px) {
+    .message-form {
+        padding: 12px;
+    }
+
+    .message-input {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .btn-send {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
